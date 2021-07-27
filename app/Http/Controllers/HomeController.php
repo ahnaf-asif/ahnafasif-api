@@ -10,7 +10,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $contacts = Contact::where('read', 0)->get();
+        $contacts = Contact::orderBy('id', 'desc')->where('read', 0)->get();
         return view('home', [
             'contacts' => $contacts
         ]);
