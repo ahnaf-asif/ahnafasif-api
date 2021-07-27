@@ -39,7 +39,7 @@ Route::get('/individual-blog/{id}', function($id){
         return [
             'status' => 200,
             'individual_blog' => Blog::select(
-                'id','title','short_description', 'thumbnail_image', 'cover_pic', 'category', 'blog',
+                'id','title','short_description', 'thumbnail_image', 'cover_pic', 'category', 'blog','created_at'
 
             )->where('archive', 1)->findorfail($id)
         ];
@@ -57,7 +57,7 @@ Route::get('/individual-portfolio/{id}', function($id){
         return [
             'status' => 200,
             'individual_portfolio' => Portfolio::select(
-                'id','title','link','cover_pic', 'short_description', 'long_description'
+                'id','title','link','cover_pic', 'short_description', 'long_description', 'created_at'
 
             )->where('archive', 1)->findorfail($id)
         ];
