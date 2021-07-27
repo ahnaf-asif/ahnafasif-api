@@ -78,6 +78,29 @@ Route::get('/individual-portfolio/{id}', function($id){
 
 
 Route::post('/contact', function(Request $request){
+    
+    if($request->name == null){
+        return [
+            'status' => 400, 
+            'error_message' => 'name cannot be empty'
+        ];
+    } else if($request->email == null){
+        return [
+            'status' => 400, 
+            'error_message' => 'email cannot be empty'
+        ];
+    }else if($request->message == null){
+        return [
+            'status' => 400, 
+            'error_message' => 'message cannot be empty'
+        ];
+    }else if(strlen($request->message) > 1500){
+        return [
+            'status' => 400,
+            'error_message' => 'message is too long. Please send a message with less than 1500 characters'
+        ];
+    }
+    
     $message = Contact::create([
         'name' => $request->name,
         'email' => $request->email,
