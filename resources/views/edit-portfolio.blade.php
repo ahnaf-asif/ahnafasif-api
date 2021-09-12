@@ -7,15 +7,15 @@
         <input type="hidden" name="_method" value="PUT" />
         <div class="form-group">
             <label for="title">Title</label>
-            <input value={!! $portfolio->title !!} type="text" id="title" name="title" class="form-control" required>
+            <input value="{!! $portfolio->title !!}" type="text" id="title" name="title" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="cover_pic">Cover Pic</label>
-            <input value={!! $portfolio->cover_pic !!} type="text" id="cover_pic" name="cover_pic" class="form-control" required>
+            <input value="{!! $portfolio->cover_pic !!}" type="text" id="cover_pic" name="cover_pic" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="link">Portfolio Link</label>
-            <input value={!! $portfolio->link !!} type="text" id="link" name="link" class="form-control" required>
+            <input value="{!! $portfolio->link !!}" type="text" id="link" name="link" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="short_description">Short Description</label>
