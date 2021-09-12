@@ -32,8 +32,8 @@ class BlogController extends Controller
         $new_blog = new Blog;
         $new_blog->title = $request->title;
         $new_blog->category = $request->category;
-        $new_blog->thumbnail_image = UploadImage::uploadPictureToImgur($request->file('thumbnail_image'));
-        $new_blog->cover_pic = UploadImage::uploadPictureToImgur($request->file('cover_pic'));
+        $new_blog->thumbnail_image = $request->thumbnail_image;
+        $new_blog->cover_pic = $request->cover_pic;
         $new_blog->short_description = $request->short_description;
         $new_blog->blog = $request->blog;
 

@@ -18,11 +18,11 @@
         </div>
         <div class="form-group">
             <label for="thumbnail_image">Thumbnail</label>
-            <input type="file" id="thumbnail_image" name="thumbnail_image" class="form-control-file" required>
+            <input type="text" id="thumbnail_image" name="thumbnail_image" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="cover_pic">Cover Pic</label>
-            <input type="file" id="cover_pic" name="cover_pic" class="form-control-file" required>
+            <input type="text" id="cover_pic" name="cover_pic" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="short_description">Short Description</label>
