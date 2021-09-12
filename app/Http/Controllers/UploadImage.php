@@ -13,7 +13,7 @@ class UploadImage extends Controller
         $client = new Client();
         $response = $client->request('POST', 'https://api.imgur.com/3/image', [
             'headers' => [
-                'Authorization' => "Client-ID ".ENV('IMGUR_CLIENT_ID'),
+                'Authorization' => "Client-ID 188d8dd42673a9d",
                 'content-type' => 'application/x-www-form-urlencoded',
             ],
             'form_params' => [
