@@ -8,7 +8,7 @@
                 <p class="text-center"><small>{{$blog->created_at->format('d M, Y')}} , {{$blog->category}}</small></p>
                 <hr>
                 <div class="short-desc">
-                    {!! $blog->short_description !!}
+                    {!! $blog->short_description !!} 
                 </div>
                 <hr>
                 <div class="thumbnail">

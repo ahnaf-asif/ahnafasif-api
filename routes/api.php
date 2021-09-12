@@ -38,10 +38,7 @@ Route::get('/individual-blog/{id}', function($id){
     try {
         return [
             'status' => 200,
-            'individual_blog' => Blog::select(
-                'id','title','short_description', 'thumbnail_image', 'cover_pic', 'category', 'blog','created_at'
-
-            )->where('archive', 1)->findorfail($id)
+            'individual_blog' => Blog::where('archive', 1)->findorfail($id)
         ];
         
     } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
